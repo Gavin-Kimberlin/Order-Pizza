@@ -1,20 +1,32 @@
-var pizza = {
-  size: ['Small', 'Medium', 'Large'],
-  sauce: ['Marinara', 'Olive Oil & Garlic', 'Creamy Garlic' ],
-  cheese: ['mozarella', 'Parmesan', 'Feta'],
-  meat: ['Bacon', 'Canadian Bacon', 'Chicken'].
+var Pizza = {
+  size: [],
+  sauce: [],
+  cheese: [],
+  meat: [],
   veggies: []
 };
 
 
-function toppings(pizza) {
+function getRadioVal(form, name) {
+  var val
+  var radios = form.elements[name]
 
+  for (var i=0, len=radios.length; i<len; i++) {
+        if ( radios[i].checked ) {
+            val = radios[i].value;
+            break;
+        }
+    }
+    console.log(val);
 };
+
 
 $(document).ready(function () {
   $('#form').submit(function (event) {
     event.preventDefault();
-    var input = $('.1').checked;
+    var input = $('.check').value;
     console.log(input);
+    var val = getRadioVal( document.getElementById('demoForm'), 'check' );
+    console.log(val);
   });
 });
