@@ -1,8 +1,10 @@
 var pizza = {
-  size: ['small', 'medium', 'large'],
-  cheese: false,
-  
-}
+  size: ['Small', 'Medium', 'Large'],
+  sauce: ['Marinara', 'Olive Oil & Garlic', 'Creamy Garlic' ],
+  cheese: ['mozarella', 'Parmesan', 'Feta'],
+  meat: ['Bacon', 'Canadian Bacon', 'Chicken'].
+  veggies: []
+};
 
 
 function toppings(pizza) {
