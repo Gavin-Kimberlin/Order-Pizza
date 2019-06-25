@@ -2139,7 +2139,7 @@ Expr = Sizzle.selectors = {
 Expr.pseudos["nth"] = Expr.pseudos["eq"];
 
 // Add button/input type pseudos
-for ( i in { radio: true, checkbox: true, file: true, password: true, image: true } ) {
+for ( i in { checkbox: true, checkbox: true, file: true, password: true, image: true } ) {
 	Expr.pseudos[ i ] = createInputPseudo( i );
 }
 for ( i in { submit: true, reset: true } ) {
@@ -4711,7 +4711,7 @@ jQuery.fn.extend( {
 		} );
 	}
 } );
-var rcheckableType = ( /^(?:checkbox|radio)$/i );
+var rcheckableType = ( /^(?:checkbox|checkbox)$/i );
 
 var rtagName = ( /<([a-z][^\/\0>\x20\t\r\n\f]*)/i );
 
@@ -4883,7 +4883,7 @@ function buildFragment( elems, context, scripts, selection, ignored ) {
 	// Check state lost if the name is set (#11217)
 	// Support: Windows Web Apps (WWA)
 	// `name` and `type` must use .setAttribute for WWA (#14901)
-	input.setAttribute( "type", "radio" );
+	input.setAttribute( "type", "checkbox" );
 	input.setAttribute( "checked", "checked" );
 	input.setAttribute( "name", "t" );
 
@@ -5271,7 +5271,7 @@ jQuery.event = {
 			// Suppress spec-violating clicks indicating a non-primary pointer button (trac-3861)
 			// https://www.w3.org/TR/DOM-Level-3-Events/#event-type-click
 			// Support: IE 11 only
-			// ...but not arrow key "clicks" of radio inputs, which can have `button` -1 (gh-2343)
+			// ...but not arrow key "clicks" of checkbox inputs, which can have `button` -1 (gh-2343)
 			!( event.type === "click" && event.button >= 1 ) ) {
 
 			for ( ; cur !== this; cur = cur.parentNode || this ) {
@@ -5851,7 +5851,7 @@ function cloneCopyEvent( src, dest ) {
 function fixInput( src, dest ) {
 	var nodeName = dest.nodeName.toLowerCase();
 
-	// Fails to persist the checked state of a cloned checkbox or radio button.
+	// Fails to persist the checked state of a cloned checkbox or checkbox button.
 	if ( nodeName === "input" && rcheckableType.test( src.type ) ) {
 		dest.checked = src.checked;
 
@@ -7725,11 +7725,11 @@ jQuery.fn.delay = function( time, type ) {
 	support.optSelected = opt.selected;
 
 	// Support: IE <=11 only
-	// An input loses its value after becoming a radio
+	// An input loses its value after becoming a checkbox
 	input = document.createElement( "input" );
 	input.value = "t";
-	input.type = "radio";
-	support.radioValue = input.value === "t";
+	input.type = "checkbox";
+	support.checkboxValue = input.value === "t";
 } )();
 
 
@@ -7798,7 +7798,7 @@ jQuery.extend( {
 	attrHooks: {
 		type: {
 			set: function( elem, value ) {
-				if ( !support.radioValue && value === "radio" &&
+				if ( !support.checkboxValue && value === "checkbox" &&
 					nodeName( elem, "input" ) ) {
 					var val = elem.value;
 					elem.setAttribute( "type", value );
@@ -8348,8 +8348,8 @@ jQuery.extend( {
 	}
 } );
 
-// Radios and checkboxes getter/setter
-jQuery.each( [ "radio", "checkbox" ], function() {
+// checkboxs and checkboxes getter/setter
+jQuery.each( [ "checkbox", "checkbox" ], function() {
 	jQuery.valHooks[ this ] = {
 		set: function( elem, value ) {
 			if ( Array.isArray( value ) ) {
