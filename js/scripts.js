@@ -1,11 +1,19 @@
-var Pizza = {
-  size: [],
-  sauce: [],
-  cheese: [],
-  meat: [],
-  veggies: []
+function Order () {
+  this.pizzas = [];
 };
 
+Order.prototype.addNewPizza = function (newPizza) {
+  this.pizza.push(newPizza);
+};
+
+function Pizza() {
+  this.size = [];
+  this.sauce = [];
+  this.cheese = [];
+  this.meats = [];
+  this.veggies = [];
+  this.price = [];
+};
 
 // function getcheckboxVal(form, name) {
 //   var val
@@ -24,11 +32,12 @@ var Pizza = {
 $(document).ready(function () {
   $('#form').submit(function (event) {
     event.preventDefault();
-    var input = [];
-    $("input:checked").each(function () {
-      input.push($(this).val())
-    });
-    console.log(input);
+    var size = $('input.size:checked').val()
+    //  $('input.size:checked').each(function () {
+    //   return ($(this).val());
+    // });
+
+    console.log(size);
     // var val = getcheckboxVal( document.getElementById('demoForm'), 'check' );
     // console.log(val);
   });
