@@ -12,78 +12,82 @@
     <div class="container">
       <h1>Order Pizza</h1>
       <form id="form">
-        <h2 id="pizzaSize">Select a Pizza Size:</h2>
-        <input name="check" class="size" type="radio" value="small" id="small">
-        <label for="small">Small</label>
-        <input name="check" class="size" type="radio" value="medium" id="medium">
-        <label for="medium">Medium</label>
-        <input name="check" class="size" type="radio" value="large" id="large">
-        <label for="large">Large</label>
+        <fieldset id="group1">
+          <h2 id="pizzaSize">Select a Pizza Size:</h2>
+          <input name="group1" class="size" type="radio" value="small" id="small">
+          <label for="small">Small</label>
+          <input name="group1" class="size" type="radio" value="medium" class="cheese" id="medium">
+          <label for="medium">Medium</label>
+          <input name="group1" class="size" type="radio" value="large" id="large">
+          <label for="large">Large</label>
+        </fieldset>
 
-        <h2 id="sauce">Choose Your Pizza Sauce:</h2>
-        <input name="check" class="sauce" type="radio" value="marinara" id="marinara">
-        <label for="marinara">Marinara</label>
-        <input name="check" class="sauce" type="radio" value="oliveOil" id="oliveOil">
-        <label for="oliveOil">Olive Oil & Garlic</label>
-        <input name="check" class="sauce" type="radio" value="garlic" id="garlic">
-        <label for="garlic">Creamy Garlic</label>
+        <fieldset id="group2">
+          <h2 id="sauce">Choose Your Pizza Sauce:</h2>
+          <input name="group2" class="sauce" type="radio" value="marinara" id="marinara">
+          <label for="marinara">Marinara</label>
+          <input name="group2" class="sauce" type="radio" value="oliveOil" id="oliveOil">
+          <label for="oliveOil">Olive Oil & Garlic</label>
+          <input name="group2" class="sauce" type="radio" value="garlic" id="garlic">
+          <label for="garlic">Creamy Garlic</label>
+        </fieldset>
 
         <h2 id="Cheese">Pick your cheese</h2>
-        <input name="check" type="checkbox" value="mozarella" id="mozarella">
+        <input name="check" class="cheese" type="checkbox" value="mozarella" id="mozarella">
         <label for="mozarella">Mozarella</label>
-        <input name="check" type="checkbox" value="parmesan" id="parmesan">
+        <input name="check" class="cheese" type="checkbox" value="parmesan" id="parmesan">
         <label for="parmesan">Parmesan</label>
-        <input name="check" type="checkbox" value="feta" id="feta">
+        <input name="check" class="cheese" type="checkbox" value="feta" id="feta">
         <label for="feta">Feta</label>
 
         <h2 id="meat">Add Your Meats:</h2>
-        <input name="check" type="checkbox" value="bacon" id="bacon">
+        <input name="check" class="meats" type="checkbox" value="bacon" id="bacon">
         <label for="bacon">Bacon</label>
-        <input name="check" type="checkbox" value="canadianBacon" id="canadianBacon">
+        <input name="check" class="meats" type="checkbox" value="canadianBacon" id="canadianBacon">
         <label for="canadianBacon">Canadian Bacon</label>
-        <input name="check" type="checkbox" value="chicken" id="chicken">
+        <input name="check" class="meats" type="checkbox" value="chicken" id="chicken">
         <label for="chicken">Chicken</label>
-        <input name="check" type="checkbox" value="pepperoni" id="pepperoni">
+        <input name="check" class="meats" type="checkbox" value="pepperoni" id="pepperoni">
         <label for="pepperoni">Pepperoni</label>
-        <input name="check" type="checkbox" value="groundBeef" id="groundBeef">
+        <input name="check" class="meats" type="checkbox" value="groundBeef" id="groundBeef">
         <label for="groundBeef">Ground Beef</label>
-        <input name="check" type="checkbox" value="groundSausage" id="groundSausage">
+        <input name="check" class="meats" type="checkbox" value="groundSausage" id="groundSausage">
         <label for="groundSausage">Ground Sausage</label>
-        <input name="check" type="checkbox" value="italianSausage" id="italianSausage">
+        <input name="check" class="meats" type="checkbox" value="italianSausage" id="italianSausage">
         <label for="italianSausage">Italian Sausage</label>
-        <input name="check" type="checkbox" value="salami" id="salami">
+        <input name="check" class="meats" type="checkbox" value="salami" id="salami">
         <label for="salami">Salami</label>
 
         <h2 id="veggies">Add Your Veggies:</h2>
-        <input name="check" type="checkbox" value="artichokeHearts" id="artichokeHearts">
+        <input name="check" class="veggies" type="checkbox" value="artichokeHearts" id="artichokeHearts">
         <label for="artichokeHearts">Artichoke Hearts</label>
-        <input name="check" type="checkbox" value="blackOlives" id="blackOlives">
+        <input name="check" class="veggies" type="checkbox" value="blackOlives" id="blackOlives">
         <label for="blackOlives">Black Olives</label>
-        <input name="check" type="checkbox" value="choppedGarlic" id="choppedGarlic">
+        <input name="check" class="veggies" type="checkbox" value="choppedGarlic" id="choppedGarlic">
         <label for="choppedGarlic">Chopped Garlic</label>
-        <input name="check" type="checkbox" value="pepper" id="pepper">
+        <input name="check" class="veggies" type="checkbox" value="pepper" id="pepper">
         <label for="pepper">Crushed Red Pepper</label>
-        <input name="check" type="checkbox" value="greenOnions" id="greenOnions">
+        <input name="check" class="veggies" type="checkbox" value="greenOnions" id="greenOnions">
         <label for="greenOnions">Green Onions</label>
-        <input name="check" type="checkbox" value="greenPeppers" id="greenPeppers">
+        <input name="check" class="veggies" type="checkbox" value="greenPeppers" id="greenPeppers">
         <label for="greenPeppers">Green Peppers</label>
-        <input name="check" type="checkbox" value="herbCheese" id="herbCheese">
+        <input name="check" class="veggies" type="checkbox" value="herbCheese" id="herbCheese">
         <label for="herbCheese">Herb & Cheese Blend</label>
-        <input name="check" type="checkbox" value="mixedOnions" id="mixedOnions">
+        <input name="check" class="veggies" type="checkbox" value="mixedOnions" id="mixedOnions">
         <label for="mixedOnions">Mixed Onions</label>
-        <input name="check" type="checkbox" value="mushrooms" id="mushrooms">
+        <input name="check" class="veggies" type="checkbox" value="mushrooms" id="mushrooms">
         <label for="mushrooms">Mushrooms</label>
-        <input name="check" type="checkbox" value="pineapple" id="pineapple">
+        <input name="check" class="veggies" type="checkbox" value="pineapple" id="pineapple">
         <label for="pineapple">Pineapple</label>
-        <input name="check" type="checkbox" value="romaTomatoes" id="romaTomatoes">
+        <input name="check" class="veggies" type="checkbox" value="romaTomatoes" id="romaTomatoes">
         <label for="romaTomatoes">Roma Tomatoes</label>
-        <input name="check" type="checkbox" value="spinach" id="spinach">
+        <input name="check" class="veggies" type="checkbox" value="spinach" id="spinach">
         <label for="spinach">Spinach</label>
-        <input name="check" type="checkbox" value="sundriedTomatoes" id="sundriedTomatoes">
+        <input name="check" class="veggies" type="checkbox" value="sundriedTomatoes" id="sundriedTomatoes">
         <label for="sundriedTomatoes">Sun-dried Tomatoes</label>
-        <input name="check" type="checkbox" value="zestyHerbs" id="zestyHerbs">
+        <input name="check" class="veggies" type="checkbox" value="zestyHerbs" id="zestyHerbs">
         <label for="zestyHerbs">Zesty Herbs</label>
-        <input name="check" type="checkbox" value="zucchini" id="zucchini">
+        <input name="check" class="veggies" type="checkbox" value="zucchini" id="zucchini">
         <label for="zucchini">Zucchini</label>
 
         <br>

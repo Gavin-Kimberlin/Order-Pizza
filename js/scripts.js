@@ -1,44 +1,34 @@
 function Order () {
   this.pizzas = [];
+  this.total;
 };
 
-Order.prototype.addNewPizza = function (newPizza) {
-  this.pizza.push(newPizza);
+function Pizza(a, b, c, d, e, f) {
+  this.size = a;
+  this.sauce = b;
+  this.cheese = c;
+  this.meats = d;
+  this.veggies = e;
+  this.price = f;
 };
 
-function Pizza() {
-  this.size = [];
-  this.sauce = [];
-  this.cheese = [];
-  this.meats = [];
-  this.veggies = [];
-  this.price = [];
+Order.prototype.addNewPizza = function (i) {
+  this.pizzas.push(i);
 };
 
-// function getcheckboxVal(form, name) {
-//   var val
-//   var checkboxs = form.elements[name]
-//
-//   for (var i=0, len=checkboxs.length; i<len; i++) {
-//         if ( checkboxs[i].checked ) {
-//             val = checkboxs[i].value;
-//             break;
-//         }
-//     }
-//     console.log(val);
-// };
-
-
+var newOrder = new Order()
 $(document).ready(function () {
   $('#form').submit(function (event) {
     event.preventDefault();
-    var size = $('input.size:checked').val()
-    //  $('input.size:checked').each(function () {
-    //   return ($(this).val());
-    // });
-
-    console.log(size);
-    // var val = getcheckboxVal( document.getElementById('demoForm'), 'check' );
-    // console.log(val);
+    var size = $('input.size:checked').val();
+    var sauce = $('input.sauce:checked').val();
+    var cheese = []; $.each($('input.cheese:checked')), function () {
+      cheese.push($(this).val());
+    };
+    var meats = [$('input.meats:checked').val()];
+    var veggies = [$('input.veggies:checked').val()];
+    var newPizza = new Pizza(size, sauce, cheese, meats, veggies);
+    newOrder.addNewPizza(newPizza)
+    console.log(newOrder);
   });
 });
