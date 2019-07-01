@@ -1,38 +1,48 @@
 # _{Application Name}_
 
-#### _{Brief description of application}, {Date of current version}_
+#### Week Four Project, 06/21/19
 
-#### By _**{List of contributors}**_
+#### By Gavin Kimberlin
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
-https://www.dyn-web.com/tutorials/forms/checkbox/get-selected.php
+This website takes input from a user that will tell the website what kind of pizza they want. The website then takes that data and returns it to the user along with the cost of their pizza.  
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+* Paste this link into your browser of choice: https://gavin-kimberlin.github.io/Order-Pizza/
+* Create a pizza using the radio buttons and checkboxes.
+* Hit submit.
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+##Specs
+
+| Behavior | Input | Output |
+| --------- | ----- | ------ |
+|Take the input of pizza from the user and return it back to them in an order | small, marinara, mozarella | small, marinara, mozarella |
+| Take the created pizza and send back how much it will cost | small, marinara, mozarella | $11 |
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+The website cannot clear the checkboxes for a new pizza and does not add up the total of the pizzas.
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+If you have any questions, please email me at guviner@gmail.com
 
 ## Technologies Used
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+HTML
+
+CSS
+
+JavaScript
+
+BootStrap
+
+jQuery
 
 ### License
 
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
+Copyright (c) 2019 Gavin Kimberlin
 
-Copyright (c) 2019 **_{List of contributors or company name}_**
+This software is licensed under the MIT license.
