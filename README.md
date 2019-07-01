@@ -18,8 +18,8 @@ This website takes input from a user that will tell the website what kind of piz
 
 | Behavior | Input | Output |
 | --------- | ----- | ------ |
-|Take the input of pizza from the user and return it back to them in an order | small, marinara, mozarella | small, marinara, mozarella |
-| Take the created pizza and send back how much it will cost | small, marinara, mozarella | $11 |
+|Take the input of pizza from the user and return it back to them in an order | small, marinara, mozarella | small, marinara, mozzarella |
+| Take the created pizza and send back how much it will cost | small, marinara, mozzarella | $11 |
 
 ## Known Bugs
 
