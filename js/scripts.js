@@ -3,13 +3,13 @@ function Order () {
   this.total;
 };
 
-function Pizza(a, b, c, d, e, f) {
-  this.size = a;
-  this.sauce = b;
-  this.cheese = c;
-  this.meats = d;
-  this.veggies = e;
-  this.price = f;
+function Pizza(size, sauce, cheese, meats, veggies) {
+  this.size = size;
+  this.sauce = sauce;
+  this.cheese = cheese;
+  this.meats = meats;
+  this.veggies = veggies;
+  this.price = 0;
 };
 
 Order.prototype.addNewPizza = function (i) {
@@ -17,23 +17,29 @@ Order.prototype.addNewPizza = function (i) {
 };
 
 Pizza.prototype.pizzaPrice = function () {
-  this.price += this.cheese.length + this.meats.length + this.veggies.length;
-  return(this.price);
+  this.price = this.cheese.length + this.meats.length + this.veggies.length;
+  if (this.size === 'small') {
+    this.price += 10;
+  } else if (this.size === 'medium') {
+    this.price += 11;
+  } else if (this.size === 'large') {
+    this.price += 14;
+  }
 };
 
 function displayOrder (display) {
   var pizzaList = $('#order');
   htmlForPizza = '';
   display.pizzas.forEach(function (pizza) {
-    htmlForPizza += "<li" + pizza.size + ">" + pizza.sauce + " " + pizza.cheese + " " + pizza.meats + " " + pizza.veggies + " " + pizza.price + "</li>";
+    htmlForPizza += '<li> Size: ' + pizza.size + '<br>Sauce: ' + pizza.sauce + '<br>Cheese: ' + pizza.cheese + '<br>Meats: ' + pizza.meats + '<br>Veggies: ' + pizza.veggies + '<br>Price: $' + pizza.price + '</li>';
   });
-  pizzaList.html(htmlForPizza);
+  pizzaList.append(htmlForPizza);
 };
 
-var newOrder = new Order()
 $(document).ready(function () {
   $('#form').submit(function (event) {
     event.preventDefault();
+    var newOrder = new Order()
     var size = $('input.size:checked').val();
     var sauce = $('input.sauce:checked').val();
     var cheese = []; $('input.cheese:checked').each(function (i) {
